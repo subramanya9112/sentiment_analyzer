@@ -1,0 +1,71 @@
+@import "./../theme.scss";
+
+.headerBar {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: $base;
+
+  .dragger {
+    width: 100%;
+    height: 100%;
+    -webkit-app-region: drag;
+  }
+
+  .header {
+    position: absolute;
+    width: 100%;
+    color: $mono3;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+
+    p {
+      margin: 0px auto;
+      width: fit-content;
+      padding: 0px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  .icons {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    -webkit-app-region: no-drag;
+    height: 100%;
+    margin-left: auto;
+    align-items: center;
+
+    .iconDiv {
+      padding: 0px 16px;
+      height: 100%;
+      display: flex;
+
+      .minimize,
+      .maximize,
+      .close {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 16px;
+        width: 16px;
+      }
+      &:hover,
+      &:active {
+        background-color: $mono2;
+      }
+    }
+  }
+}
+
+.closeRed {
+  &:hover,
+  &:active {
+    background-color: $hue1 !important;
+  }
+}

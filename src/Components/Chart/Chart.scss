@@ -1,0 +1,24 @@
+@import "./../../theme.scss";
+
+.container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  .canvas {
+    width: 100px;
+    height: 100px;
+  }
+
+  .value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $mono3;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+}

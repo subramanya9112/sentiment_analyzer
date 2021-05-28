@@ -1,0 +1,103 @@
+@import "./../../theme.scss";
+
+.fileAnalysis {
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  background-color: $mono4;
+  padding: 10px;
+  overflow: auto;
+  color: $mono3;
+
+  .upload {
+    background-color: $mono1;
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    position: relative;
+    border-radius: 10px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .fileUpload {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+    }
+
+    .uploadText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+
+      .icon {
+        height: 100px;
+        width: 100px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .dragged {
+    background-color: darken($mono1, 90);
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .result {
+    background-color: $mono1;
+    border-radius: 10px;
+
+    .tableRow {
+      padding: 15px;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #41d997;
+
+      .review {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chart {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $mono2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $mono2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $mono1;
+}

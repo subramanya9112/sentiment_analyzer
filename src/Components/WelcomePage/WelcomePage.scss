@@ -1,0 +1,59 @@
+@import "./../../theme.scss";
+
+.welcomePage {
+  height: 100%;
+  width: 100%;
+  background-color: $mono4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    height: 300px;
+    width: 300px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .watermark {
+    width: 100%;
+    color: $mono3;
+    padding-top: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .row {
+      width: 240px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 10px;
+      font-size: 12px;
+
+      .command {
+        width: 50%;
+        text-align: left;
+        padding-right: 15px;
+      }
+      .keybinding {
+        width: 50%;
+        text-align: right;
+        padding-left: 15px;
+        letter-spacing: 2px;
+
+        span {
+          background-color: $mono2;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

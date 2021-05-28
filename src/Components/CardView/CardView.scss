@@ -1,0 +1,42 @@
+@import "../../theme.scss";
+
+.card-container {
+  width: 100%;
+  height: 300px;
+  align-items: flex;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.front {
+  background-color: $base;
+  pointer-events: none;
+}
+
+.back {
+  background-color: $mono2;
+  transform: rotateY(180deg);
+}
