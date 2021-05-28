@@ -22,8 +22,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-public/sentiment_analyzer/amazon_alexa.tsv
-public/sentiment_analyzer/model.h5
-
-public/files/amazon_alexa.tsv
-public/files/model.h5

@@ -7,6 +7,8 @@ import countPlotRating from './plots/countPlot_rating.png';
 import barPlot from './plots/barPlot.png';
 import wordCloud from './plots/wordCloud.png';
 import histogramLength from './plots/histogramLength.png';
+import predTrain from './plots/predTrain.png';
+import predTest from './plots/predTest.png';
 const { dialog } = window.require('electron').remote;
 const { ipcRenderer } = window.require('electron');
 
@@ -224,12 +226,19 @@ export default function Info() {
                 <span className="white">cm<span className="blue"> = confusion_matrix</span>(y_train, (model.<span className="blue">predict</span>(X_train)<span className="blue"> &gt; </span><span className="green">0.5</span>))</span><br />
                 <span className="white">sns.<span className="blue">heatmap</span>(cm, <span className="red">annot</span><span className="blue"> = </span><span className="orange">True</span>)</span><br />
             </div>
+            <div className="plot">
+                <img src={predTrain} alt="predTrain" />
+            </div>
 
             <div className="subSection">Confusion matrix for testing dataset</div>
             <div className="codeSection">
                 <span className="white">cm<span className="blue"> = confusion_matrix</span>(y_test, (model.<span className="blue">predict</span>(X_test)<span className="blue"> &gt; </span><span className="green">0.5</span>))</span><br />
                 <span className="white">sns.<span className="blue">heatmap</span>(cm, <span className="red">annot</span><span className="blue"> = </span><span className="orange">True</span>)</span><br />
             </div>
+            <div className="plot">
+                <img src={predTest} alt="predTest" />
+            </div>
+
 
             <div className="subSection">Predict the values for 2 review</div>
             <div className="codeSection">
